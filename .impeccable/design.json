@@ -1,0 +1,383 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-30T00:00:00.000Z",
+  "title": "Design System: Aliko",
+  "extensions": {
+    "colorMeta": {
+      "sauge": {
+        "role": "primary",
+        "displayName": "Sauge profonde",
+        "canonical": "oklch(0.4824 0.0916 163)",
+        "tonalRamp": [
+          "oklch(0.1789 0.0342 163)",
+          "oklch(0.2612 0.0512 163)",
+          "oklch(0.3565 0.0724 163)",
+          "oklch(0.4824 0.0916 163)",
+          "oklch(0.5893 0.0842 163)",
+          "oklch(0.7412 0.0978 163)",
+          "oklch(0.8452 0.0478 163)",
+          "oklch(0.9686 0.0064 163)"
+        ]
+      },
+      "sauge-tint": {
+        "role": "primary",
+        "displayName": "Sauge voile",
+        "canonical": "oklch(0.9686 0.0064 163)",
+        "tonalRamp": [
+          "oklch(0.2891 0.0264 163)",
+          "oklch(0.3891 0.0298 163)",
+          "oklch(0.4891 0.0312 163)",
+          "oklch(0.5891 0.0289 163)",
+          "oklch(0.7012 0.0234 163)",
+          "oklch(0.8123 0.0167 163)",
+          "oklch(0.9134 0.0102 163)",
+          "oklch(0.9686 0.0064 163)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Encre",
+        "canonical": "oklch(0.2178 0.0122 168)",
+        "tonalRamp": [
+          "oklch(0.1512 0.0096 168)",
+          "oklch(0.2178 0.0122 168)",
+          "oklch(0.2987 0.0154 168)",
+          "oklch(0.4123 0.0148 168)",
+          "oklch(0.5514 0.0138 168)",
+          "oklch(0.6712 0.0102 168)",
+          "oklch(0.8234 0.0061 168)",
+          "oklch(0.9698 0.0027 168)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papier",
+        "canonical": "oklch(1 0 0)",
+        "tonalRamp": [
+          "oklch(0.1789 0 0)",
+          "oklch(0.2612 0 0)",
+          "oklch(0.3891 0 0)",
+          "oklch(0.5514 0 0)",
+          "oklch(0.7123 0 0)",
+          "oklch(0.8975 0 0)",
+          "oklch(0.9698 0 0)",
+          "oklch(1 0 0)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Filet",
+        "canonical": "oklch(0.9189 0.0035 106)",
+        "tonalRamp": [
+          "oklch(0.2043 0.0035 106)",
+          "oklch(0.2987 0.0035 106)",
+          "oklch(0.4123 0.0035 106)",
+          "oklch(0.5514 0.0035 106)",
+          "oklch(0.7123 0.0035 106)",
+          "oklch(0.8452 0.0035 106)",
+          "oklch(0.9189 0.0035 106)",
+          "oklch(0.9865 0.0018 106)"
+        ]
+      },
+      "rose": {
+        "role": "tertiary",
+        "displayName": "Rose de refus",
+        "canonical": "oklch(0.5847 0.2079 22.5)",
+        "tonalRamp": [
+          "oklch(0.2312 0.0812 22.5)",
+          "oklch(0.3212 0.1178 22.5)",
+          "oklch(0.4312 0.1634 22.5)",
+          "oklch(0.5847 0.2079 22.5)",
+          "oklch(0.6534 0.1842 22.5)",
+          "oklch(0.7612 0.1234 22.5)",
+          "oklch(0.8734 0.0678 22.5)",
+          "oklch(0.9603 0.0203 22.5)"
+        ]
+      },
+      "status-sent": {
+        "role": "tertiary",
+        "displayName": "Ardoise d'envoi",
+        "canonical": "oklch(0.5107 0.0862 245)",
+        "tonalRamp": [
+          "oklch(0.2043 0.0342 245)",
+          "oklch(0.2743 0.0512 245)",
+          "oklch(0.3891 0.0712 245)",
+          "oklch(0.5107 0.0862 245)",
+          "oklch(0.6234 0.0834 245)",
+          "oklch(0.7089 0.0824 245)",
+          "oklch(0.8412 0.0412 245)",
+          "oklch(0.9639 0.0158 245)"
+        ]
+      },
+      "status-interview": {
+        "role": "tertiary",
+        "displayName": "Abricot d'entretien",
+        "canonical": "oklch(0.6412 0.1284 62)",
+        "tonalRamp": [
+          "oklch(0.2312 0.0478 62)",
+          "oklch(0.3312 0.0712 62)",
+          "oklch(0.4712 0.1012 62)",
+          "oklch(0.6412 0.1284 62)",
+          "oklch(0.7234 0.1198 62)",
+          "oklch(0.7892 0.1156 68)",
+          "oklch(0.8834 0.0634 68)",
+          "oklch(0.9679 0.0228 68)"
+        ]
+      },
+      "document": {
+        "role": "neutral",
+        "displayName": "Page du document",
+        "canonical": "oklch(1 0 0)",
+        "tonalRamp": [
+          "oklch(0.1788 0 0)",
+          "oklch(0.3512 0 0)",
+          "oklch(0.5123 0 0)",
+          "oklch(0.6734 0 0)",
+          "oklch(0.8012 0 0)",
+          "oklch(0.8975 0 0)",
+          "oklch(0.9623 0 0)",
+          "oklch(1 0 0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Titre de première vue d'un accueil ou d'une page publique. Un seul par page."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Titre d'écran applicatif et titre de carte de CV principal."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Titre de carte, libellé de bouton, entrée de navigation, en-tête de colonne."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texte courant et contenu d'offre. 65–75 caractères par ligne en lecture suivie."
+      },
+      "label": {
+        "displayName": "Label mono",
+        "purpose": "Micro-libellés en capitales, unités, clés techniques. Jamais une phrase, jamais au-dessus de 12 px."
+      },
+      "numeric": {
+        "displayName": "Numeric",
+        "purpose": "Scores, quotas, compteurs et dates, en chiffres tabulaires."
+      }
+    },
+    "shadows": [
+      {
+        "name": "repose",
+        "value": "0 1px 2px 0 hsl(168 18% 8% / 0.06)",
+        "purpose": "Seule ombre autorisée au repos : décolle d'un cheveu les contrôles pleins (bouton, champ)."
+      },
+      {
+        "name": "soulevement",
+        "value": "0 6px 16px -4px hsl(168 18% 8% / 0.12)",
+        "purpose": "Carte cliquable au survol, avec translateY(-2px). Promet qu'il se passera quelque chose au clic."
+      },
+      {
+        "name": "calque",
+        "value": "0 12px 28px -8px hsl(168 18% 8% / 0.16)",
+        "purpose": "Menu déroulant, popover, pilule de suggestion de relecture."
+      },
+      {
+        "name": "modal",
+        "value": "0 20px 48px -12px hsl(168 18% 8% / 0.18)",
+        "purpose": "Dialogue et tiroir mobile."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.32, 0.72, 0, 1)",
+        "purpose": "Changement d'état (survol, focus, sélection) sur 180 ms. Courbe par défaut du système."
+      },
+      {
+        "name": "ease-entrance",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Apparition d'un calque ou remplissage d'un score, 300 à 600 ms."
+      },
+      {
+        "name": "ease-exit",
+        "value": "cubic-bezier(0.4, 0, 1, 1)",
+        "purpose": "Disparition d'un calque, 140 ms. Toujours plus rapide que son entrée."
+      },
+      {
+        "name": "ease-emphasized",
+        "value": "cubic-bezier(0.2, 0, 0, 1)",
+        "purpose": "Confirmation d'une action réussie (coche, passage de statut) : décélération franche, sans rebond. Le système ne fait jamais de dépassement."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      },
+      {
+        "name": "2xl",
+        "value": "1400px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Bouton principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "L'action unique d'un écran. Un seul par vue.",
+      "html": "<button class=\"ds-btn-primary\">Créer une version</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 0 16px; border: none; border-radius: 10px; background: var(--primary, oklch(0.4824 0.0916 163)); color: var(--primary-foreground, #fff); font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif; font-size: 14px; font-weight: 600; box-shadow: 0 1px 2px 0 hsl(168 18% 8% / 0.06); cursor: pointer; transition: background 180ms cubic-bezier(0.32, 0.72, 0, 1); } .ds-btn-primary:hover { background: oklch(0.4324 0.0916 163); } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring, oklch(0.4824 0.0916 163)) 50%, transparent); } .ds-btn-primary:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Bouton secondaire",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "L'action secondaire par défaut : filet, pas d'aplat.",
+      "html": "<button class=\"ds-btn-outline\">Dupliquer</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 0 16px; border: 1px solid var(--border, oklch(0.9189 0.0035 106)); border-radius: 10px; background: var(--background, #fff); color: var(--foreground, oklch(0.2178 0.0122 168)); font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif; font-size: 14px; font-weight: 600; box-shadow: 0 1px 2px 0 hsl(168 18% 8% / 0.06); cursor: pointer; transition: background 180ms cubic-bezier(0.32, 0.72, 0, 1), color 180ms cubic-bezier(0.32, 0.72, 0, 1); } .ds-btn-outline:hover { background: var(--accent, oklch(0.9686 0.0064 163)); color: var(--accent-foreground, oklch(0.4824 0.0916 163)); } .ds-btn-outline:focus-visible { outline: none; border-color: var(--ring, oklch(0.4824 0.0916 163)); box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring, oklch(0.4824 0.0916 163)) 50%, transparent); }"
+    },
+    {
+      "name": "Champ de saisie",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Filet au repos, anneau de focus en sauge. Aucun halo coloré.",
+      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"Nom de l'entreprise\" />",
+      "css": ".ds-input { height: 36px; width: 280px; padding: 0 12px; border: 1px solid var(--input, oklch(0.9189 0.0035 106)); border-radius: 10px; background: transparent; color: var(--foreground, oklch(0.2178 0.0122 168)); font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif; font-size: 14px; box-shadow: 0 1px 2px 0 hsl(168 18% 8% / 0.06); transition: border-color 180ms cubic-bezier(0.32, 0.72, 0, 1), box-shadow 180ms cubic-bezier(0.32, 0.72, 0, 1); } .ds-input::placeholder { color: var(--muted-foreground, oklch(0.5514 0.0138 168)); } .ds-input:focus-visible { outline: none; border-color: var(--ring, oklch(0.4824 0.0916 163)); box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring, oklch(0.4824 0.0916 163)) 50%, transparent); } .ds-input[aria-invalid=\"true\"] { border-color: var(--destructive, oklch(0.5847 0.2079 22.5)); box-shadow: 0 0 0 3px color-mix(in oklch, var(--destructive, oklch(0.5847 0.2079 22.5)) 20%, transparent); }"
+    },
+    {
+      "name": "Carte",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "Plate au repos, soulevée au survol seulement si elle est cliquable.",
+      "html": "<article class=\"ds-card\"><h3 class=\"ds-card-title\">Développeur front-end</h3><p class=\"ds-card-meta\">3 versions · modifié il y a 2 jours</p></article>",
+      "css": ".ds-card { width: 320px; padding: 20px; border: 1px solid var(--border, oklch(0.9189 0.0035 106)); border-radius: 12px; background: var(--card, #fff); font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif; transition: box-shadow 180ms cubic-bezier(0.32, 0.72, 0, 1), transform 180ms cubic-bezier(0.32, 0.72, 0, 1); } .ds-card:hover { box-shadow: 0 6px 16px -4px hsl(168 18% 8% / 0.12); transform: translateY(-2px); } .ds-card-title { margin: 0 0 4px; font-size: 16px; font-weight: 600; letter-spacing: -0.02em; color: var(--card-foreground, oklch(0.2178 0.0122 168)); } .ds-card-meta { margin: 0; font-size: 14px; color: var(--muted-foreground, oklch(0.5514 0.0138 168)); font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Pilule de statut",
+      "kind": "chip",
+      "refersTo": "chip-status",
+      "description": "Signalétique de candidature : pastille pleine sur fond voilé, toujours doublée du libellé.",
+      "html": "<span class=\"ds-chip ds-chip-interview\"><span class=\"ds-chip-dot\"></span>Entretien</span>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 10px; border-radius: 9999px; font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif; font-size: 13px; font-weight: 500; font-variant-numeric: tabular-nums; } .ds-chip-dot { width: 6px; height: 6px; border-radius: 9999px; background: currentColor; } .ds-chip-interview { background: var(--status-interview-soft, oklch(0.9679 0.0228 68)); color: var(--status-interview, oklch(0.6412 0.1284 62)); }"
+    },
+    {
+      "name": "Entrée de navigation active",
+      "kind": "nav",
+      "refersTo": "nav-item-active",
+      "description": "Un seul élément actif à la fois : fond voilé, texte sauge, filet vertical de 2 px au bord gauche.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-item ds-nav-item-active\" href=\"#\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 4h12l4 4v12H4z\"/><path d=\"M8 12h8M8 16h5\"/></svg>Candidatures<span class=\"ds-nav-badge\">3</span></a><a class=\"ds-nav-item\" href=\"#\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 3h9l5 5v13H5z\"/></svg>Mes CV</a></nav>",
+      "css": ".ds-nav { display: flex; flex-direction: column; gap: 2px; width: 240px; padding: 8px; background: var(--sidebar, oklch(0.9865 0.0018 106)); border-radius: 12px; } .ds-nav-item { position: relative; display: flex; align-items: center; gap: 12px; height: 36px; padding: 0 12px; border-radius: 8px; text-decoration: none; font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif; font-size: 16px; font-weight: 600; color: var(--sidebar-foreground, oklch(0.3565 0.0122 168)); transition: background 180ms cubic-bezier(0.32, 0.72, 0, 1); } .ds-nav-item:hover { background: var(--muted, oklch(0.9698 0.0027 106)); } .ds-nav-item-active { background: var(--sidebar-accent, oklch(0.9615 0.0227 163)); color: var(--sidebar-accent-foreground, oklch(0.4824 0.0916 163)); } .ds-nav-item-active::before { content: \"\"; position: absolute; left: -8px; top: 8px; bottom: 8px; width: 2px; border-radius: 9999px; background: currentColor; } .ds-nav-badge { margin-left: auto; min-width: 20px; height: 20px; padding: 0 6px; display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background: var(--sidebar-primary, oklch(0.4824 0.0916 163)); color: var(--sidebar-primary-foreground, #fff); font-size: 12px; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Score de vérification",
+      "kind": "custom",
+      "refersTo": "score-arc",
+      "description": "Composant signature : arc sauge, chiffre tabulaire, et jamais affiché sans les actions qui le font monter.",
+      "html": "<div class=\"ds-score\"><svg class=\"ds-score-arc\" width=\"120\" height=\"120\" viewBox=\"0 0 120 120\"><circle cx=\"60\" cy=\"60\" r=\"52\" fill=\"none\" stroke=\"var(--muted, oklch(0.9698 0.0027 106))\" stroke-width=\"6\"/><circle cx=\"60\" cy=\"60\" r=\"52\" fill=\"none\" stroke=\"var(--primary, oklch(0.4824 0.0916 163))\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-dasharray=\"327\" stroke-dashoffset=\"98\" transform=\"rotate(-90 60 60)\"/></svg><span class=\"ds-score-value\">70</span><span class=\"ds-score-label\">SUR 100</span></div>",
+      "css": ".ds-score { position: relative; width: 120px; height: 120px; display: grid; place-items: center; font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif; } .ds-score-arc { position: absolute; inset: 0; } .ds-score-value { font-size: 32px; font-weight: 600; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; color: var(--foreground, oklch(0.2178 0.0122 168)); line-height: 1; } .ds-score-label { position: absolute; bottom: 30px; font-family: var(--font-jetbrains-mono), ui-monospace, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; color: var(--muted-foreground, oklch(0.5514 0.0138 168)); }"
+    },
+    {
+      "name": "Page du document",
+      "kind": "custom",
+      "refersTo": "document-page",
+      "description": "Composant signature : la page du CV, opaque et blanche, identique en thème clair et sombre.",
+      "html": "<div class=\"ds-doc\"><div class=\"ds-doc-name\">Camille Renard</div><div class=\"ds-doc-role\">Développeuse front-end</div><div class=\"ds-doc-rule\"></div><div class=\"ds-doc-line\"></div><div class=\"ds-doc-line ds-doc-line-short\"></div></div>",
+      "css": ".ds-doc { width: 210px; height: 297px; padding: 24px; border: 1px solid var(--document-border, oklch(0.8975 0 0)); border-radius: 8px; background: var(--document, #fff); color: var(--document-foreground, oklch(0.1788 0 0)); box-shadow: 0 2px 4px -1px hsl(168 18% 8% / 0.08); font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif; } .ds-doc-name { font-size: 16px; font-weight: 600; letter-spacing: -0.02em; } .ds-doc-role { margin-top: 2px; font-size: 11px; color: oklch(0.5123 0 0); } .ds-doc-rule { margin: 12px 0; height: 1px; background: var(--document-border, oklch(0.8975 0 0)); } .ds-doc-line { height: 6px; border-radius: 3px; background: oklch(0.9231 0 0); margin-bottom: 6px; } .ds-doc-line-short { width: 60%; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "La table de travail",
+    "overview": "Une table blanche, bien éclairée, sur laquelle des documents sont posés à plat. L'interface est la table : plane, silencieuse, sans matière propre. Les documents — CV, lettres, offres — sont les seuls objets qui ont le droit d'exister comme objets. Et il y a un stylo, un seul, vert sauge : il désigne ce sur quoi l'utilisateur doit agir. Toute la tension du système tient dans ce rapport. Quand le stylo se met à écrire partout, la table devient illisible.\n\nLe système emprunte sa discipline à Airbnb : fond blanc franc, air généreux, filets de 1 px plutôt que bordures marquées, cartes plates au repos qui se soulèvent sous le curseur, contrôles en pilule ou en rectangle doux, et un accent unique tenu très court. Il n'en emprunte ni la couleur, ni la photographie, ni le vocabulaire de voyage. La retenue est reprise ; le costume ne l'est pas.\n\nL'anti-référence est explicite et nommée : le verre façon Apple du cahier des charges v1 est abandonné. Pas de surfaces translucides, pas de backdrop-filter, pas de fond d'ambiance flouté, pas de verres teintés empilés. Un CV est un document opaque ; une interface qui prétend être en verre rend illisible ce qu'elle est censée mettre en valeur, et casse à la première préférence Réduire la transparence. La profondeur ici vient de l'ordre des plans et du filet, jamais de la matière.",
+    "keyCharacteristics": [
+      "Fond blanc, chrome applicatif en blanc cassé, texte encre à peine désaturé vers le vert",
+      "Une seule couleur d'action : sauge profonde, tenue sous 10 % de la surface",
+      "Filet de 1 px avant toute ombre ; les cartes sont plates au repos",
+      "Instrument Sans partout, JetBrains Mono réservé aux micro-libellés",
+      "La page du CV n'est jamais thémée : elle reste blanche et opaque, en clair comme en sombre",
+      "Chiffres tabulaires partout où une valeur peut changer sans que la ligne bouge"
+    ],
+    "rules": [
+      {
+        "name": "The One Pen Rule",
+        "body": "La sauge couvre au maximum 10 % de la surface d'un écran. Un écran qui contient deux boutons sauge contient un bouton de trop : le second devient outline. Sa rareté est ce qui la rend lisible.",
+        "section": "colors"
+      },
+      {
+        "name": "The Document Rule",
+        "body": "La page d'un CV, d'une lettre ou d'un aperçu de modèle utilise --document / --document-foreground / --document-border, jamais les jetons de thème. Elle reste blanche et opaque en mode sombre. Ce qui est imprimé ne se thème pas.",
+        "section": "colors"
+      },
+      {
+        "name": "The Signal-Only Rule",
+        "body": "Les cinq teintes de statut ne sortent jamais de l'objet candidature. Aucune icône décorative, aucun titre de section, aucun graphique ne les emprunte.",
+        "section": "colors"
+      },
+      {
+        "name": "The Browser-Surface Rule",
+        "body": "Les surfaces que le navigateur dessine lui-même portent le système comme les autres : sélection de texte en sauge voile (--secondary / --secondary-foreground), curseur de saisie et contrôles natifs en sauge (caret-color et accent-color en --primary), ascenseur en filet (scrollbar-color: var(--border) transparent, scrollbar-width: thin), soulignement des liens décollé de 0.25em sur 1 px d'épaisseur. C'est câblé une seule fois dans la base globale de l'application ; un écran ne redéfinit jamais sa propre couleur de sélection.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Instrument Sans écrit tout ce qui se lit. JetBrains Mono ne sort qu'en capitales, à 11 px, sur des libellés de quelques mots. Une phrase en mono est une erreur.",
+        "section": "typography"
+      },
+      {
+        "name": "The Steady Number Rule",
+        "body": "Toute valeur susceptible de changer sans rechargement — score sur 100, compteur de lettres restantes, nombre de versions, vues de la vitrine — est en chiffres tabulaires. Un chiffre qui fait sauter sa ligne détruit la confiance dans le chiffre.",
+        "section": "typography"
+      },
+      {
+        "name": "The Air Rule",
+        "body": "Il y a plus d'espace au-dessus d'un titre qu'en dessous — rapport 2:1 (32px / 16px). C'est ce qui rattache visuellement un titre à ce qu'il annonce.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat-At-Rest Rule",
+        "body": "Une surface posée est plate. Si vous ajoutez une ombre à une carte au repos, vous avez probablement un problème de contraste de fond, pas un problème de profondeur : montez le filet, pas l'ombre.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Hairline-First Rule",
+        "body": "Un filet de 1 px en --border est tenté avant toute ombre et avant tout aplat de fond. Deux séparateurs adjacents (filet + changement de fond) sont un de trop.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do poser la sauge sur une seule action par écran, et passer toutes les autres en outline ou ghost.",
+      "Do laisser les surfaces dessinées par le navigateur — sélection, curseur, contrôles natifs, ascenseur, soulignement — hériter de la base globale ; ne jamais les redéfinir écran par écran.",
+      "Do tenter un filet --border de 1 px avant d'envisager une ombre ou un aplat de fond.",
+      "Do utiliser --document* pour toute page de CV ou de lettre, y compris en mode sombre.",
+      "Do mettre en chiffres tabulaires toute valeur qui peut changer sans rechargement (data-numeric ou font-variant-numeric: tabular-nums).",
+      "Do doubler chaque couleur de statut d'un texte : la pilule porte son libellé, la pastille ne suffit pas.",
+      "Do garder les gouttières sur la progression 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64, et laisser deux fois plus d'air au-dessus d'un titre qu'en dessous.",
+      "Do animer avec --ease-standard sur 180 ms pour un état, --ease-entrance sur 300–600 ms pour une apparition, et rien du tout sous prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't utiliser backdrop-filter, de surface translucide, de fond d'ambiance flouté ou de « verre » de quelque épaisseur que ce soit — la direction verre du CDC v1 est abandonnée, pas atténuée.",
+      "Don't peindre une surface en dégradé, ni un texte, ni une bordure. Les aplats sont pleins.",
+      "Don't colorer une ombre. Toutes les ombres sont l'encre du système à faible opacité.",
+      "Don't sortir les cinq teintes de statut de l'objet candidature, ni les réutiliser comme couleurs de graphique — les graphiques sont une rampe de sauge.",
+      "Don't thémer, teinter ou inverser la page d'un CV.",
+      "Don't écrire une phrase en JetBrains Mono, ni l'employer au-dessus de 12 px.",
+      "Don't ajouter d'ombre à une carte au repos, ni de seconde ombre pour « renforcer » la première.",
+      "Don't signaler une erreur par la seule couleur : un message en texte accompagne toujours aria-invalid.",
+      "Don't introduire un rayon hors des trois familles (10 / 12 / pilule, 16 px pour les conteneurs emboîtants).",
+      "Don't animer avec un rebond ou un élastique (cubic-bezier dont la sortie dépasse 1). Le système décélère, il ne rebondit pas : l'emphase passe par --ease-emphasized."
+    ]
+  }
+}

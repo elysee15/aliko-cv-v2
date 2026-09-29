@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@aliko/tailwind-config/theme";
+
+@source "../../../../packages/ui/src/*.{ts,tsx}";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(.light, .light *));
+@custom-variant auto (&:where(.auto, .auto *));
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    letter-spacing: var(--tracking-normal);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+  /* Instrument Sans runs wide at display sizes; pull it in. */
+  h1,
+  h2,
+  h3 {
+    letter-spacing: calc(var(--tracking-normal) - 0.02em);
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  /* Numbers in tables, scores and counters never re-flow. */
+  [data-numeric],
+  table :is(td, th) {
+    font-variant-numeric: tabular-nums;
+  }
+  /* Respect « Réduire les animations » (CDC §3). */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-delay: 0ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      transition-delay: 0ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  /* Respect « Réduire la transparence » (CDC §3). */
+  @media (prefers-reduced-transparency: reduce) {
+    * {
+      backdrop-filter: none !important;
+    }
+  }
+
+  /* Les surfaces que le navigateur dessine portent aussi le système. */
+  ::selection {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+  }
+  :where(input, textarea) {
+    caret-color: var(--primary);
+  }
+  :where(html) {
+    accent-color: var(--primary);
+    scrollbar-color: var(--border) transparent;
+    scrollbar-width: thin;
+  }
+  :where(a) {
+    text-underline-offset: 0.25em;
+    text-decoration-thickness: 1px;
+  }
+}
+
