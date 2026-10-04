@@ -1,0 +1,44 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - link "Aliko" [ref=e5] [cursor=pointer]:
+        - /url: /
+    - main [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - heading "Se connecter" [level=1] [ref=e9]
+          - paragraph [ref=e10]: Reprenez vos CV, vos lettres et vos candidatures là où vous les avez laissés.
+        - generic [ref=e11]:
+          - button "Continuer avec Google" [ref=e12]
+          - generic [ref=e13]: ou
+          - generic [ref=e15]:
+            - generic [ref=e16]:
+              - group [ref=e17]:
+                - generic [ref=e18]: Adresse e-mail
+                - textbox "Adresse e-mail" [ref=e19]:
+                  - /placeholder: vous@exemple.fr
+              - group [ref=e20]:
+                - generic [ref=e21]:
+                  - generic [ref=e22]: Mot de passe
+                  - link "Mot de passe oublié ?" [ref=e23] [cursor=pointer]:
+                    - /url: /mot-de-passe-oublie
+                - generic [ref=e24]:
+                  - textbox "Mot de passe" [ref=e25]
+                  - button "Afficher" [ref=e26]
+            - button "Se connecter" [ref=e27]
+        - paragraph [ref=e29]:
+          - text: Pas encore de compte ?
+          - link "Créer un compte" [ref=e30] [cursor=pointer]:
+            - /url: /register
+        - paragraph [ref=e31]:
+          - text: En continuant, vous acceptez les
+          - link "conditions d’utilisation" [ref=e32] [cursor=pointer]:
+            - /url: /conditions
+          - text: et la
+          - link "politique de confidentialité" [ref=e33] [cursor=pointer]:
+            - /url: /confidentialite
+          - text: d’Aliko.
+  - button "Toggle theme" [ref=e35]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e42] [cursor=pointer]
+  - alert [ref=e46]

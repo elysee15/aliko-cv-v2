@@ -20,7 +20,7 @@
   --accent: oklch(0.9686 0.0064 163);
   --accent-foreground: oklch(0.4824 0.0916 163);
 
-  --destructive: oklch(0.5847 0.2079 22.5);
+  --destructive: oklch(0.5278 0.154 25.37);
   --destructive-foreground: oklch(1 0 0);
 
   /* Hairlines */
@@ -57,12 +57,19 @@
   --sidebar-border: oklch(0.9189 0.0035 106);
   --sidebar-ring: oklch(0.4824 0.0916 163);
 
+  /* Le panneau de marque des écrans d'accès : sauge profonde, jamais thémée,
+     pour que le texte blanc tienne son contraste en clair comme en sombre. */
+  --brand-panel: oklch(0.3415 0.0536 163);
+  --brand-panel-foreground: oklch(0.9686 0.0064 163);
+  --brand-panel-muted: oklch(0.8012 0.0338 163);
+  --brand-panel-border: oklch(0.4324 0.0612 163);
+
   /* The CV page is never themed — it is the PDF, on screen. */
   --document: oklch(1 0 0);
   --document-foreground: oklch(0.1788 0 0);
   --document-border: oklch(0.8975 0 0);
 
-  --radius: 0.75rem;
+  --radius: 0.5rem;
 
   /* Flat at rest. Shadows are a response to state, never decoration. */
   --shadow-2xs: 0 1px 2px 0 hsl(168 18% 8% / 0.04);
@@ -193,18 +200,17 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
+  --color-brand-panel: var(--brand-panel);
+  --color-brand-panel-foreground: var(--brand-panel-foreground);
+  --color-brand-panel-muted: var(--brand-panel-muted);
+  --color-brand-panel-border: var(--brand-panel-border);
+
   --color-document: var(--document);
   --color-document-foreground: var(--document-foreground);
   --color-document-border: var(--document-border);
 
   --font-sans:
-    var(--font-apfel), ui-sans-serif, system-ui, -apple-system,
-    "Segoe UI", sans-serif;
-  --font-display:
-    var(--font-absans), var(--font-apfel), ui-sans-serif, system-ui,
-    sans-serif;
-  --font-brukt:
-    var(--font-apfel-brukt), var(--font-apfel), ui-sans-serif, system-ui,
+    var(--font-manrope), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     sans-serif;
   --font-mono:
     var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -239,4 +245,9 @@
 
   --default-transition-duration: 180ms;
   --default-transition-timing-function: var(--ease-standard);
+}
+
+@utility dot-grid {
+  background-image: radial-gradient(circle at 20% 20%, #fff 1px, #0000 1px);
+  background-size: 24px 24px;
 }

@@ -12,6 +12,20 @@ export const AuthName = z
   .min(2, "Indiquez votre nom complet.")
   .max(80, "Quatre-vingts caractères au maximum.");
 
+/** Le formulaire d'inscription demande prénom et nom séparément : chaque
+ *  message doit nommer le champ qu'il refuse. */
+export const AuthGivenName = z
+  .string()
+  .trim()
+  .min(2, "Indiquez votre prénom.")
+  .max(40, "Quarante caractères au maximum.");
+
+export const AuthFamilyName = z
+  .string()
+  .trim()
+  .min(2, "Indiquez votre nom.")
+  .max(40, "Quarante caractères au maximum.");
+
 export const AuthEmail = z
   .string()
   .trim()
@@ -19,9 +33,7 @@ export const AuthEmail = z
   .pipe(z.email("Cette adresse e-mail n’est pas valide."));
 
 /** À la connexion on ne juge pas la robustesse : le mot de passe existe déjà. */
-export const AuthPassword = z
-  .string()
-  .min(1, "Renseignez votre mot de passe.");
+export const AuthPassword = z.string().min(1, "Renseignez votre mot de passe.");
 
 export const AuthNewPassword = z
   .string()
@@ -41,3 +53,10 @@ export const SignUpSchema = z.object({
 
 export type SignInValues = z.infer<typeof SignInSchema>;
 export type SignUpValues = z.infer<typeof SignUpSchema>;
+
+/** Mot de passe oublié : on ne demande que l'adresse, jamais autre chose. */
+export const ForgotPasswordSchema = z.object({
+  email: AuthEmail,
+});
+
+export type ForgotPasswordValues = z.infer<typeof ForgotPasswordSchema>;

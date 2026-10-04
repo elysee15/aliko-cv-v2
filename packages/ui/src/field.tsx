@@ -3,7 +3,7 @@
 import type { VariantProps } from "class-variance-authority";
 import { useMemo } from "react";
 import { cva } from "class-variance-authority";
-
+import { CircleAlert } from "lucide-react";
 import { cn } from "@aliko/ui";
 import { Label } from "@aliko/ui/label";
 import { Separator } from "@aliko/ui/separator";
@@ -61,29 +61,26 @@ export function FieldGroup({
   );
 }
 
-const fieldVariants = cva(
-  "group/field data-[invalid=true]:text-destructive flex w-full gap-1",
-  {
-    variants: {
-      orientation: {
-        vertical: ["flex-col [&>*]:w-full [&>.sr-only]:w-auto"],
-        horizontal: [
-          "flex-row items-center",
-          "[&>[data-slot=field-label]]:flex-auto",
-          "has-[>[data-slot=field-content]]:items-start has-[>[data-slot=field-content]]:[&>[role=checkbox],[role=radio]]:mt-px",
-        ],
-        responsive: [
-          "flex-col @md/field-group:flex-row @md/field-group:items-center [&>*]:w-full @md/field-group:[&>*]:w-auto [&>.sr-only]:w-auto",
-          "@md/field-group:[&>[data-slot=field-label]]:flex-auto",
-          "@md/field-group:has-[>[data-slot=field-content]]:items-start @md/field-group:has-[>[data-slot=field-content]]:[&>[role=checkbox],[role=radio]]:mt-px",
-        ],
-      },
-    },
-    defaultVariants: {
-      orientation: "vertical",
+const fieldVariants = cva("group/field flex w-full gap-2", {
+  variants: {
+    orientation: {
+      vertical: ["flex-col [&>*]:w-full [&>.sr-only]:w-auto"],
+      horizontal: [
+        "flex-row items-center",
+        "[&>[data-slot=field-label]]:flex-auto",
+        "has-[>[data-slot=field-content]]:items-start has-[>[data-slot=field-content]]:[&>[role=checkbox],[role=radio]]:mt-px",
+      ],
+      responsive: [
+        "flex-col @md/field-group:flex-row @md/field-group:items-center [&>*]:w-full @md/field-group:[&>*]:w-auto [&>.sr-only]:w-auto",
+        "@md/field-group:[&>[data-slot=field-label]]:flex-auto",
+        "@md/field-group:has-[>[data-slot=field-content]]:items-start @md/field-group:has-[>[data-slot=field-content]]:[&>[role=checkbox],[role=radio]]:mt-px",
+      ],
     },
   },
-);
+  defaultVariants: {
+    orientation: "vertical",
+  },
+});
 
 export function Field({
   className,
@@ -126,7 +123,10 @@ export function FieldLabel({
       data-slot="field-label"
       className={cn(
         "group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50",
-        "has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col has-[>[data-slot=field]]:rounded-md has-[>[data-slot=field]]:border [&>*]:data-[slot=field]:p-4",
+        // Micro-libellé : mono, capitales, 11px. La seule place où JetBrains Mono parle.
+        "text-muted-foreground text-[0.6875rem] font-medium tracking-[0.06em] uppercase",
+        "group-data-[invalid=true]/field:text-destructive",
+        "has-[>[data-slot=field]]:text-foreground has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col has-[>[data-slot=field]]:rounded-md has-[>[data-slot=field]]:border has-[>[data-slot=field]]:font-sans has-[>[data-slot=field]]:text-sm has-[>[data-slot=field]]:tracking-normal has-[>[data-slot=field]]:normal-case [&>*]:data-[slot=field]:p-4",
         "has-data-[state=checked]:bg-primary/5 has-data-[state=checked]:border-primary dark:has-data-[state=checked]:bg-primary/10",
         className,
       )}
@@ -240,10 +240,28 @@ export function FieldError({
     <div
       role="alert"
       data-slot="field-error"
-      className={cn("text-destructive text-sm font-normal", className)}
+      className={cn(
+        "text-destructive flex items-start gap-1.5 text-xs leading-snug font-normal",
+        className,
+      )}
       {...props}
     >
-      {content}
+      <CircleAlert
+        aria-hidden="true"
+        className="mt-0.5 size-3 shrink-0"
+      />
+      <span>{content}</span>
     </div>
+  );
+}
+
+/** Deux champs côte à côte dès que la place le permet, empilés sinon. */
+export function FieldRow({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="field-row"
+      className={cn("grid grid-cols-1 gap-5 sm:grid-cols-2", className)}
+      {...props}
+    />
   );
 }

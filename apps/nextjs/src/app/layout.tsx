@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import localFont from "next/font/local";
+import { JetBrains_Mono, Manrope } from "next/font/google";
 
 import { cn } from "@aliko/ui";
 import { ThemeProvider, ThemeToggle } from "@aliko/ui/theme";
@@ -38,31 +38,17 @@ export const viewport: Viewport = {
   ],
 };
 
-
-
-const apfelGrotezk = localFont({
-  src: [
-    {
-      path: "../styles/fonts/ApfelGrotezk-Brukt/ApfelGrotezk-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../styles/fonts/ApfelGrotezk-Brukt/ApfelGrotezk-Mittel.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../styles/fonts/ApfelGrotezk-Brukt/ApfelGrotezk-Fett.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-apfel",
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
   display: "swap",
 });
 
-
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+});
 
 export default function RootLayout(props: { children: React.ReactNode }) {
   return (
@@ -70,7 +56,8 @@ export default function RootLayout(props: { children: React.ReactNode }) {
       <body
         className={cn(
           "bg-background text-foreground min-h-screen font-sans antialiased",
-          apfelGrotezk.variable,
+          manrope.variable,
+          jetbrainsMono.variable,
         )}
       >
         <ThemeProvider>

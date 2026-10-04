@@ -1,0 +1,62 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e9]:
+          - heading "Votre candidature, tenue au propre." [level=2] [ref=e10]
+          - paragraph [ref=e11]: CV, lettres de motivation et suivi des réponses au même endroit.
+        - list [ref=e12]:
+          - listitem [ref=e13]: Un CV par offre, sans repartir d’une page blanche
+          - listitem [ref=e16]: Des lettres qui reprennent votre parcours, pas un modèle
+          - listitem [ref=e19]: Chaque candidature suivie jusqu’à la réponse
+        - generic [ref=e22]:
+          - blockquote [ref=e23]: « J’ai arrêté de recopier mon CV à chaque offre. Trois entretiens en un mois, et je sais enfin où j’en suis. »
+          - generic [ref=e24]:
+            - paragraph [ref=e25]: Awa Diallo
+            - paragraph [ref=e26]: Chargée de projet, Abidjan
+    - main [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - link "Aliko" [ref=e30] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e35]:
+            - heading "Content de vous revoir" [level=1] [ref=e36]
+            - paragraph [ref=e37]: Reprenez vos CV, vos lettres et vos candidatures là où vous les avez laissés.
+        - generic [ref=e38]:
+          - button "Continuer avec Google" [ref=e39]
+          - generic [ref=e40]: ou par e-mail
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - group [ref=e44]:
+                - generic [ref=e45]: Adresse e-mail
+                - textbox "Adresse e-mail" [ref=e47]:
+                  - /placeholder: vous@exemple.fr
+              - group [ref=e48]:
+                - generic [ref=e49]:
+                  - generic [ref=e50]: Mot de passe
+                  - link "Mot de passe oublié ?" [ref=e51] [cursor=pointer]:
+                    - /url: /mot-de-passe-oublie
+                - generic [ref=e52]:
+                  - textbox "Mot de passe" [ref=e53]:
+                    - /placeholder: Votre mot de passe
+                  - button "Afficher le mot de passe" [ref=e55]
+              - group [ref=e58]:
+                - checkbox "Rester connecté" [checked] [ref=e59]
+                - checkbox [checked] [aria-hidden]
+                - generic [ref=e60]: Rester connecté
+            - button "Se connecter" [ref=e61]
+        - paragraph [ref=e62]:
+          - text: Pas encore de compte ?
+          - link "Créer un compte" [ref=e63] [cursor=pointer]:
+            - /url: /register
+        - paragraph [ref=e64]:
+          - text: En continuant, vous acceptez les
+          - link "conditions d’utilisation" [ref=e65] [cursor=pointer]:
+            - /url: /conditions
+          - text: et la
+          - link "politique de confidentialité" [ref=e66] [cursor=pointer]:
+            - /url: /confidentialite
+          - text: d’Aliko.
+  - button "Toggle theme" [ref=e68]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e75] [cursor=pointer]
