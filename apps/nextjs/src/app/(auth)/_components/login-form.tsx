@@ -2,6 +2,7 @@
 
 import { useId, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { EnvelopeClosedIcon, LockClosedIcon } from "@radix-ui/react-icons";
 import { useForm } from "@tanstack/react-form";
 
@@ -11,17 +12,33 @@ import { Field, FieldError, FieldLabel } from "@aliko/ui/field";
 import { Input, InputAction, InputGroup, InputIcon } from "@aliko/ui/input";
 import { AuthEmail, AuthPassword } from "@aliko/validators";
 
-import { messageFor, RevealButton } from "./form-bits";
+import { authClient } from "~/auth/client";
+import { messageFor, RevealButton, toastAuthError } from "./form-bits";
 
 export function LoginForm() {
   const uid = useId();
+  const router = useRouter();
   const [revealed, setRevealed] = useState(false);
 
   const form = useForm({
     defaultValues: { email: "", password: "", remember: true },
-    // Le câblage Better Auth arrive dans un lot suivant ; la validation, elle,
-    // est déjà réelle et c'est elle qui garde la porte.
-    onSubmit: () => undefined,
+    onSubmit: async ({ value }) => {
+      const { error } = await authClient.signIn.email({
+        email: value.email.trim(),
+        password: value.password,
+        rememberMe: value.remember,
+      });
+
+      if (error) {
+        toastAuthError(error);
+        return;
+      }
+
+      // `refresh()` est indispensable : les composants serveur ont déjà rendu
+      // une page sans session, et seule une revalidation les remet à jour.
+      router.push("/");
+      router.refresh();
+    },
   });
 
   return (
@@ -150,7 +167,7 @@ export function LoginForm() {
             disabled={isSubmitting}
             className="h-11 w-full"
           >
-            Se connecter
+            {isSubmitting ? "Connexion…" : "Se connecter"}
           </Button>
         )}
       />

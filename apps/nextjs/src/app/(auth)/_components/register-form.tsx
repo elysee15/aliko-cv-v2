@@ -2,6 +2,7 @@
 
 import { useId, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   EnvelopeClosedIcon,
   LockClosedIcon,
@@ -19,6 +20,7 @@ import {
   FieldRow,
 } from "@aliko/ui/field";
 import { Input, InputAction, InputGroup, InputIcon } from "@aliko/ui/input";
+import { toast } from "@aliko/ui/toast";
 import {
   AuthEmail,
   AuthFamilyName,
@@ -26,11 +28,13 @@ import {
   AuthNewPassword,
 } from "@aliko/validators";
 
-import { messageFor, RevealButton } from "./form-bits";
+import { authClient } from "~/auth/client";
+import { messageFor, RevealButton, toastAuthError } from "./form-bits";
 import { PasswordStrength } from "./password-strength";
 
 export function RegisterForm() {
   const uid = useId();
+  const router = useRouter();
   const [revealed, setRevealed] = useState(false);
 
   const form = useForm({
@@ -41,9 +45,31 @@ export function RegisterForm() {
       password: "",
       terms: false,
     },
-    // Le câblage Better Auth arrive dans un lot suivant ; la validation, elle,
-    // est déjà réelle et c'est elle qui garde la porte.
-    onSubmit: () => undefined,
+    /**
+     * L'adresse n'est pas vérifiée pour entrer : le compte est utilisable
+     * immédiatement et le courrier de confirmation part en arrière-plan. On
+     * amène donc l'utilisateur dans l'application, pas sur un écran d'attente.
+     */
+    onSubmit: async ({ value }) => {
+      const { error } = await authClient.signUp.email({
+        name: `${value.firstName.trim()} ${value.lastName.trim()}`,
+        email: value.email.trim(),
+        password: value.password,
+      });
+
+      if (error) {
+        toastAuthError(error);
+        return;
+      }
+
+      toast.success("Bienvenue sur Aliko", {
+        description:
+          "Un e-mail de confirmation vient de partir : vous pourrez ainsi récupérer votre mot de passe en cas d’oubli.",
+      });
+
+      router.push("/");
+      router.refresh();
+    },
   });
 
   return (
@@ -304,7 +330,7 @@ export function RegisterForm() {
             disabled={isSubmitting}
             className="h-11 w-full"
           >
-            Créer mon compte
+            {isSubmitting ? "Création du compte…" : "Créer mon compte"}
           </Button>
         )}
       />

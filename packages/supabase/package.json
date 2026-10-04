@@ -1,11 +1,10 @@
 {
-  "name": "@aliko/auth",
+  "name": "@aliko/supabase",
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/index.ts",
-    "./middleware": "./src/middleware.ts",
     "./client": "./src/client.ts",
+    "./server": "./src/server.ts",
     "./env": "./env.ts"
   },
   "license": "MIT",
@@ -13,24 +12,21 @@
     "clean": "git clean -xdf .cache .turbo dist node_modules",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint --flag unstable_native_nodejs_ts_config",
-    "generate": "dotenv -e ../../.env -- bunx @better-auth/cli generate --config script/auth-cli.ts --output ../db/src/auth-schema.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
-    "@aliko/db": "workspace:*",
-    "@aliko/email": "workspace:*",
-    "@better-auth/expo": "catalog:",
+    "@supabase/supabase-js": "catalog:",
     "@t3-oss/env-core": "^0.13.8",
-    "better-auth": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
     "@aliko/eslint-config": "workspace:*",
     "@aliko/prettier-config": "workspace:*",
     "@aliko/tsconfig": "workspace:*",
-    "@better-auth/cli": "catalog:",
+    "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
+    "server-only": "^0.0.1",
     "typescript": "catalog:"
   },
   "prettier": "@aliko/prettier-config"

@@ -1,0 +1,10 @@
+{
+  "extends": "@aliko/tsconfig/compiled-package.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "dom"],
+    "jsx": "react-jsx",
+    "rootDir": "."
+  },
+  "include": ["src", "*.ts"],
+  "exclude": ["node_modules", "eslint.config.ts"]
+}

@@ -3,9 +3,11 @@ import { vercel } from "@t3-oss/env-nextjs/presets-zod";
 import { z } from "zod/v4";
 
 import { authEnv } from "@aliko/auth/env";
+import { emailEnv } from "@aliko/email/env";
+import { supabaseEnv } from "@aliko/supabase/env";
 
 export const env = createEnv({
-  extends: [authEnv(), vercel()],
+  extends: [authEnv(), emailEnv(), supabaseEnv(), vercel()],
   shared: {
     NODE_ENV: z
       .enum(["development", "production", "test"])

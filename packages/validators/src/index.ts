@@ -60,3 +60,20 @@ export const ForgotPasswordSchema = z.object({
 });
 
 export type ForgotPasswordValues = z.infer<typeof ForgotPasswordSchema>;
+
+/**
+ * Réinitialisation : le mot de passe est saisi deux fois. La confirmation est
+ * vérifiée au niveau de l'objet, sinon le message se poserait sur le premier
+ * champ alors qu'il parle du second.
+ */
+export const ResetPasswordSchema = z
+  .object({
+    password: AuthNewPassword,
+    confirmation: z.string().min(1, "Confirmez votre mot de passe."),
+  })
+  .refine((values) => values.password === values.confirmation, {
+    path: ["confirmation"],
+    message: "Les deux mots de passe ne sont pas identiques.",
+  });
+
+export type ResetPasswordValues = z.infer<typeof ResetPasswordSchema>;

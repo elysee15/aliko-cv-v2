@@ -16,6 +16,8 @@
     "@aliko/api": "workspace:*",
     "@aliko/auth": "workspace:*",
     "@aliko/db": "workspace:*",
+    "@aliko/email": "workspace:*",
+    "@aliko/supabase": "workspace:*",
     "@aliko/ui": "workspace:*",
     "@aliko/validators": "workspace:*",
     "@radix-ui/react-icons": "^1.3.2",

@@ -10,6 +10,7 @@ import { Field, FieldError, FieldLabel } from "@aliko/ui/field";
 import { Input, InputGroup, InputIcon } from "@aliko/ui/input";
 import { AuthEmail } from "@aliko/validators";
 
+import { authClient } from "~/auth/client";
 import { messageFor } from "./form-bits";
 
 /**
@@ -22,9 +23,22 @@ export function ForgotPasswordForm() {
 
   const form = useForm({
     defaultValues: { email: "" },
-    // Le câblage Better Auth arrive dans un lot suivant, comme pour la
-    // connexion ; la validation, elle, est déjà réelle.
-    onSubmit: ({ value }) => setSentTo(value.email.trim()),
+    onSubmit: async ({ value }) => {
+      const email = value.email.trim();
+
+      /**
+       * Le résultat de l'appel n'est volontairement pas lu : qu'il réussisse,
+       * qu'il échoue ou que l'adresse soit inconnue, l'écran suivant est le
+       * même. Afficher une erreur ici reviendrait à confirmer l'existence du
+       * compte, et à offrir un oracle pour énumérer les adresses.
+       */
+      await authClient.requestPasswordReset({
+        email,
+        redirectTo: "/reinitialiser-mot-de-passe",
+      });
+
+      setSentTo(email);
+    },
   });
 
   if (sentTo !== null) {
@@ -111,7 +125,7 @@ export function ForgotPasswordForm() {
             disabled={isSubmitting}
             className="h-11 w-full"
           >
-            Envoyer le lien
+            {isSubmitting ? "Envoi…" : "Envoyer le lien"}
           </Button>
         )}
       />
